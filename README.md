@@ -1,5 +1,7 @@
 # emodipt-custom
 
+![Emodipt Custom Theme Screenshot](screenshot.png)
+
 A custom theme for **Oh My Posh**, edited from the `emodipt-extend` theme to enhance the terminal's appearance and functionality.
 
 ## Installation
@@ -22,10 +24,6 @@ A custom theme for **Oh My Posh**, edited from the `emodipt-extend` theme to enh
    ```bash
    source ~/.zshrc
    ```
-
-## Screenshot
-
-![Emodipt Custom Theme Screenshot](screenshot.png)
 
 ## Customizations
 Feel free to modify the theme to suit your preferences. The theme is based on `emodipt-extend`, which gives a vibrant and colorful experience, with the following customizations:
