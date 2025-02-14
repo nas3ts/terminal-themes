@@ -12,7 +12,7 @@ A custom theme for **Oh My Posh**, edited from the `emodipt-extend` theme to enh
 ### Setting Up
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/emodipt-custom.git
+   git clone https://github.com/kuro1kag3/emodipt-custom.git
    ```
 2. Set the theme in your shell configuration. For example, for **Zsh**, you can add this to your `.zshrc`:
    ```bash
