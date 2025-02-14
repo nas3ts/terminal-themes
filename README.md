@@ -1,7 +1,3 @@
-Here's a comprehensive README draft for your repo:
-
----
-
 # emodipt-custom
 
 A custom theme for **Oh My Posh**, edited from the `emodipt-extend` theme to enhance the terminal's appearance and functionality.
