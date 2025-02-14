@@ -14,10 +14,9 @@ A custom theme for **Oh My Posh**, edited from the `emodipt-extend` theme to enh
    ```bash
    git clone https://github.com/kuro1kag3/emodipt-custom.git
    ```
-2. Set the theme in your shell configuration. For example, for **Zsh**, you can add this to your `.zshrc`:
+2. Set the theme in your shell configuration. For example, for **Bash**, you can add this to your `.bashrc`:
    ```bash
-   export POSH_THEMES_PATH="path_to_this_repo"
-   export THEME="emodipt-custom"
+   eval "$(oh-my-posh init bash --config /path-to-this-repo/emodipt-custom.omp.json)"
    ```
 3. Restart your terminal or source the configuration:
    ```bash
