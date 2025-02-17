@@ -1,9 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "enable_cursor_positioning": true,
   "blocks": [
     {
       "alignment": "left",
-      "newline": false,
+      "newline": true,
       "segments": [
         {
           "type": "shell",
