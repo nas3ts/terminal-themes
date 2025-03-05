@@ -1,6 +1,6 @@
 # emodipt-custom
 
-![Emodipt Custom Theme Screenshot](screenshot.png)
+![Emodipt Custom Theme Screenshot](screenshot1.png)
 
 A custom theme for **Oh My Posh**, edited from the `emodipt-extend` theme to enhance the terminal's appearance and functionality.
 
