@@ -106,6 +106,10 @@
     }
   ],
   "final_space": true,
+  "transient_prompt": {
+    "foreground": "#E06C75",
+    "template": "\u276f "
+  },
   "version": 3
 }
 
