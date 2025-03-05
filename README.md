@@ -23,7 +23,7 @@ A custom theme for **Oh My Posh**, edited from the `emodipt-extend` theme to enh
    ```
 
 ## Customizations
-Feel free to modify the theme to suit your preferences. The theme is based on `emodipt-extend`, which gives a vibrant and colorful experience, with the following customizations:
+Feel free to modify the theme to suit your preferences. The theme is based on [`emodipt-extend`](https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/emodipt-extend.omp.json), which gives a vibrant and colorful experience, with the following customizations:
 - Altered segment colors.
 - Font and icon tweaks.
 - Enhanced segment visibility for a cleaner experience.
