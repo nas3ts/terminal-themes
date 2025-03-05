@@ -19,7 +19,7 @@ A custom theme for **Oh My Posh**, edited from the `emodipt-extend` theme to enh
    ```
 3. Restart your terminal or source the configuration:
    ```bash
-   source ~/.zshrc
+   source ~/.bashrc
    ```
 
 ## Customizations
