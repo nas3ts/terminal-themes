@@ -96,6 +96,12 @@
           "template": "\u0021"
         },
         {
+          "type": "python",
+          "style": "powerline",
+          "foreground": "#b8ff75",
+          "template": "  {{ .Full }} "
+        },
+        {
           "type": "text",
           "style": "plain",
           "foreground": "#E06C75",
