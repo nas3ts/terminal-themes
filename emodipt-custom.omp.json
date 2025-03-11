@@ -99,7 +99,7 @@
           "type": "python",
           "style": "powerline",
           "foreground": "#b8ff75",
-          "template": "  {{ .Full }} "
+          "template": " {{ .Full }} "
         },
         {
           "type": "text",
