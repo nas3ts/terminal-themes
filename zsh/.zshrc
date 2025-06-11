@@ -31,7 +31,7 @@ else
 fi
 
 
-eval "$(oh-my-posh init zsh --config ~/Documents/projects/themes/terminal/emodipt-custom.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/Dev/themes/terminal/emodipt-custom.omp.json)"
 export GOPROXY=https://proxy.golang.org,direct
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
