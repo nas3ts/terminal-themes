@@ -8,11 +8,15 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/nasets/.zshrc'
 
+#autoloads
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+autoload -Us tetriscurses
 
 # aliases
+alias tetris="tetriscurses"
+
 # Check if lsd is installed
 if command -v lsd >/dev/null 2>&1; then
     alias ls="lsd -a"
@@ -32,7 +36,7 @@ fi
 
 # Check if bat is installed
 if command -v bat >/dev/null 2>&1; then
-    alias cat="bat"
+    alias cat="bat --color=always"
 else
     # Print the installation message if bat is not installed
     if [[ -z "$DISABLE_BAT_MESSAGE" ]]; then
@@ -47,7 +51,6 @@ else
     alias cat="cat"
 fi
 
-# aliases
 # Check if wine is installed
 if command -v wine >/dev/null 2>&1; then
     alias cmd="wine cmd"
@@ -64,6 +67,10 @@ else
     # Alias cmd to a no-op or a safe fallback
     alias cmd="echo 'wine is not installed: cmd unavailable'"
 fi
+
+alias zl="zoxide query --list"
+
+eval "$(zoxide init zsh)"
 
 eval "$(oh-my-posh init zsh --config ~/Dev/themes/terminal/emodipt-custom.omp.json)"
 export GOPROXY=https://proxy.golang.org,direct
