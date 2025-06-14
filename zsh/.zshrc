@@ -12,11 +12,13 @@ zstyle :compinstall filename '/home/nasets/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-autoload -Us tetriscurses
+autoload -Uz tetriscurses
 
 # aliases
 alias tetris="tetriscurses"
-
+alias v="nvim"
+alias c="clear"
+alias df="dysk"
 # Check if lsd is installed
 if command -v lsd >/dev/null 2>&1; then
     alias ls="lsd -a"
