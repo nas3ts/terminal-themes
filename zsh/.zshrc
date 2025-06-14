@@ -1,7 +1,19 @@
 # Lines configured by zsh-newuser-install
+
+# History file location and limits
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
+
+# History behavior settings
+setopt hist_ignore_dups        # Don't record duplicate consecutive commands
+setopt hist_ignore_all_dups    # Remove older duplicates as new ones are added
+setopt hist_ignore_space       # Don't record commands that start with a space
+setopt hist_reduce_blanks      # Remove superfluous blanks before saving
+setopt hist_verify             # Don't execute from history without confirmation
+setopt inc_append_history      # Add commands to history immediately, not at shell exit
+setopt share_history           # Share command history between terminal sessions
+
 setopt autocd beep extendedglob nomatch
 bindkey -e
 # End of lines configured by zsh-newuser-install
@@ -16,9 +28,47 @@ autoload -Uz tetriscurses
 
 # aliases
 alias tetris="tetriscurses"
-alias v="nvim"
 alias c="clear"
-alias df="dysk"
+
+# Conditional alias for Neovim (v)
+if command -v nvim >/dev/null 2>&1; then
+    alias v="nvim"
+else
+    alias v="nano"
+    if [[ -z "$DISABLE_NVIM_MESSAGE" ]]; then
+        echo "nvim is not installed. Using 'nano' as fallback."
+        echo "To disable this message, set the DISABLE_NVIM_MESSAGE environment variable."
+    fi
+fi
+
+# Conditional alias for Dysk (df)
+if command -v dysk >/dev/null 2>&1; then
+    alias df="dysk"
+else
+    alias df="df -h"
+    if [[ -z "$DISABLE_DYSK_MESSAGE" ]]; then
+        echo "dysk is not installed. Using 'df -h' as fallback."
+        echo "To disable this message, set the DISABLE_DYSK_MESSAGE environment variable."
+    fi
+fi
+
+if command -v advcp >/dev/null 2>&1 && command -v advmv >/dev/null 2>&1; then
+  # Use safe wrappers to avoid replacing system cp/mv
+  alias cpg='advcp -g'
+  alias mvg='advmv -g'
+  # Optionally override cp/mv (use with caution)
+  alias cp='advcp -g'
+  alias mv='advmv -g'
+else
+  # Fallbacks
+  alias cp='cp -v'
+  alias mv='mv -v'
+  if [[ -z "$DISABLE_ADVCP_MESSAGE" ]]; then
+    echo "advcpmv not found; using default cp/mv. Install from https://github.com/jarun/advcpmv"
+    echo "Set DISABLE_ADVCP_MESSAGE=1 to silence."
+  fi
+fi
+
 # Check if lsd is installed
 if command -v lsd >/dev/null 2>&1; then
     alias ls="lsd -a"
