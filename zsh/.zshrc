@@ -30,6 +30,40 @@ else
     alias ls="ls --color=auto"
 fi
 
+# Check if bat is installed
+if command -v bat >/dev/null 2>&1; then
+    alias cat="bat"
+else
+    # Print the installation message if bat is not installed
+    if [[ -z "$DISABLE_BAT_MESSAGE" ]]; then
+        echo "bat is not installed. To install bat, run:"
+        echo "  sudo apt install bat     # Debian/Ubuntu"
+        echo "  sudo pacman -S bat       # Arch/Manjaro"
+        echo "  or visit https://github.com/sharkdp/bat"
+        echo "To disable this message, set the DISABLE_BAT_MESSAGE environment variable."
+    fi
+
+    # Alias cat to default cat if bat is not installed
+    alias cat="cat"
+fi
+
+# aliases
+# Check if wine is installed
+if command -v wine >/dev/null 2>&1; then
+    alias cmd="wine cmd"
+else
+    # Print the installation message if wine is not installed
+    if [[ -z "$DISABLE_WINE_MESSAGE" ]]; then
+        echo "wine is not installed. To install wine, run:"
+        echo "  sudo apt install wine     # Debian/Ubuntu"
+        echo "  sudo pacman -S wine       # Arch/Manjaro"
+        echo "  or visit https://www.winehq.org"
+        echo "To disable this message, set the DISABLE_WINE_MESSAGE environment variable."
+    fi
+
+    # Alias cmd to a no-op or a safe fallback
+    alias cmd="echo 'wine is not installed: cmd unavailable'"
+fi
 
 eval "$(oh-my-posh init zsh --config ~/Dev/themes/terminal/emodipt-custom.omp.json)"
 export GOPROXY=https://proxy.golang.org,direct
