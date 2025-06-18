@@ -12,10 +12,11 @@
           "foreground": "#E06C75",
           "properties": {
             "mapped_shell_names": {
-              "pwsh": "Shell",
+              "pwsh": "pwsh",
               "powershell": "Shell",
-              "cmd": "Cmd",
-              "bash": "Bash"
+              "cmd": "cmd",
+              "bash": "bash",
+              "zsh": "zsh"
             }
           },
           "template": "\ue795 {{ .Name }}"
