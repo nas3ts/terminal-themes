@@ -26,7 +26,7 @@ Custom themes to enhance your terminal’s look and feel.
 ## 🎨 Theme Preview
 
 ### `emodipt-custom`
-![emodipt-custom Theme Screenshot](emodipt-custom.png)
+![emodipt-custom Theme Screenshot](screenshots/emodipt-custom.png)
 
 ## 🔗 Links
 - [Oh My Posh](https://ohmyposh.dev)
