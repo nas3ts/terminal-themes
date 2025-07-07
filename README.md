@@ -1,33 +1,32 @@
-# emodipt-custom
+# My terminal themes
 
-![Emodipt Custom Theme Screenshot](screenshot.png)
-
-A custom terminal theme to enhance the terminal's appearance and functionality.
+Custom terminal themes to enhance the terminal's appearance and functionality.
 
 ## Installation
 
 ### Prerequisites
-1. **Oh My Posh**: Make sure you have [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh) installed.
+1. **Oh My Posh**: Make sure you have [Oh My Posh](https://ohmyposh.dev) installed.
 
 2. **Nerd Fonts**: The theme requires a Nerd Font to render icons properly. Install a [Nerd Font](https://www.nerdfonts.com/font-downloads).
 
 ### Setting Up
-1. Download `emodipt-custom.omp.json` file in the [Releases](https://github.com/kuro1kag3/emodipt-custom/releases) section.
+1. Download an `.omp.yaml` for the theme of your choosing
 2. Set the theme in your shell configuration. For example, for **Bash**, you can add this to your `.bashrc`:
    ```bash
-   eval "$(oh-my-posh init bash --config /path-to-the-file/emodipt-custom.omp.json)"
+   eval "$(oh-my-posh init bash --config /path-to-the-file/theme-name.omp.json)"
    ```
 3. Restart your terminal or source the configuration:
    ```bash
    source ~/.bashrc
    ```
+   Note: For other shell configs visit [here](https://ohmyposh.dev/docs/installation/prompt)
 
-## Customizations
-Feel free to modify the theme to suit your preferences. The theme is based on [`emodipt-extend`](https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/emodipt-extend.omp.json), which gives a vibrant and colorful experience, with the following customizations:
-- Altered segment colors.
-- Font and icon tweaks.
-- Enhanced segment visibility for a cleaner experience.
+## Themes
+
+#### emodipt-custom
+
+![emodipt-custom Theme Screenshot](emodipt-custom.png)
 
 ## Links
-- [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh)
+- [Oh My Posh](https://ohmyposh.dev )
 - [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
