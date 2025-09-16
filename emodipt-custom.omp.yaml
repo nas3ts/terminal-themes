@@ -19,7 +19,7 @@ blocks:
             cmd: cmd
             bash: bash
             zsh: zsh
-        template: '  {{ .Name }}'
+        template: ' {{ .Name }}'
       - type: git
         style: plain
         foreground: '#F3C267'
