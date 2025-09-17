@@ -9,10 +9,7 @@ blocks:
         style: plain
         foreground: '#E06C75'
         template: '{{ if eq .OS "android" }} {{ else }}{{.Icon}}{{ end }}'
-      - type: session
-        styles: plain
-        foreground: '#90EE90'
-        template: '{{ if .SSHSession }} {{ end }}'
+
       - type: shell
         style: plain
         foreground: '#E06C75'
@@ -47,6 +44,10 @@ blocks:
         foreground_templates:
           - '{{ if gt .Code 0 }}#E06C75{{ end }}'
         template: ' x{{ reason .Code }}'
+      - type: session
+        styles: plain
+        foreground: '#90EE90'
+        template: '{{ if .SSHSession }} {{ end }}'
       - type: executiontime
         style: diamond
         foreground: '#b8ff75'
