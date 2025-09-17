@@ -23,7 +23,7 @@ blocks:
       - type: session
         styles: plain
         foreground: '#90EE90'
-        template: '{{ if .SSHSession }} {{ end }}'
+        template: '{{ if .SSHSession }}  {{ end }}'
       - type: git
         style: plain
         foreground: '#F3C267'
