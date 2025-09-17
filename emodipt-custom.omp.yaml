@@ -47,10 +47,6 @@ blocks:
         foreground_templates:
           - '{{ if gt .Code 0 }}#E06C75{{ end }}'
         template: ' x{{ reason .Code }}'
-      - type: session
-        styles: plain
-        foreground: '#90EE90'
-        template: '{{ if .SSHSession }} {{ end }}'
       - type: executiontime
         style: diamond
         foreground: '#b8ff75'
