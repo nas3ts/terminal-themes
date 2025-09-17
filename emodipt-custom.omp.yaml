@@ -9,6 +9,10 @@ blocks:
         style: plain
         foreground: '#E06C75'
         template: '{{ if eq .OS "android" }} {{ else }}{{.Icon}}{{ end }}'
+      - type: session
+        styles: plain
+        foreground: '#90EE90'
+        template: '{{ if .SSHSession }} {{ end }}'
       - type: shell
         style: plain
         foreground: '#E06C75'
