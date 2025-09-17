@@ -8,7 +8,7 @@ blocks:
       - type: os
         style: plain
         foreground: '#E06C75'
-        template: '{{ if eq .OS "android" }}"\uF17b"{{ else }}{{.Icon}}{{ end }}'
+        template: '{{ if eq .OS "android" }}{{ else }}{{.Icon}}{{ end }}'
       - type: shell
         style: plain
         foreground: '#E06C75'
