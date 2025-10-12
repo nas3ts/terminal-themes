@@ -20,13 +20,13 @@ blocks:
     segments:
       - type: status
         style: plain
-        foreground: '#b8ff75'
+        foreground: '#4c4b49'
         foreground_templates:
           - '{{ if gt .Code 0 }}#E06C75{{ end }}'
         template: ' x{{ reason .Code }}'
       - type: executiontime
         style: diamond
-        foreground: '#b8ff75'
+        foreground: '#4c4b49'
         foreground_templates:
           - '{{ if gt .Code 0 }}#E06C75{{ end }}'
         properties:
