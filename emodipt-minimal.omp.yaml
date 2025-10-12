@@ -25,7 +25,7 @@ blocks:
           - '{{ if gt .Code 0 }}#E06C75{{ end }}'
         template: ' x{{ reason .Code }}'
       - type: executiontime
-        style: diamond
+        style: plain
         foreground: '#565656'
         foreground_templates:
           - '{{ if gt .Code 0 }}#E06C75{{ end }}'
