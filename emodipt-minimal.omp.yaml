@@ -17,6 +17,7 @@ blocks:
         template: ' {{ .Path }}'
     type: prompt
   - alignment: right
+    overflow: hide
     segments:
       - type: status
         style: plain
@@ -31,7 +32,8 @@ blocks:
           - '{{ if gt .Code 0 }}#E06C75{{ end }}'
         properties:
           style: roundrock
-          always_enabled: true
+          threashhold: 5
+          always_enabled: false
         template: ' {{ .FormattedMs }} '
     type: prompt
   - alignment: left
