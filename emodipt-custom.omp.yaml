@@ -9,6 +9,36 @@ blocks:
         styles: plain
         foreground: '#90EE90'
         template: '{{ if .SSHSession }}  {{ end }}'
+      - type: path
+        style: plain
+        foreground: '#61AFEF'
+        properties:
+          style: full
+        template: ' {{ .Path }}'
+    type: prompt
+  - alignment: right
+    overflow: hide
+    segments:
+      - type: status
+        style: plain
+        foreground: '#565656'
+        foreground_templates:
+          - '{{ if gt .Code 0 }}#E06C75{{ end }}'
+        template: ' x{{ reason .Code }}'
+      - type: executiontime
+        style: plain
+        foreground: '#565656'
+        foreground_templates:
+          - '{{ if gt .Code 0 }}#E06C75{{ end }}'
+        properties:
+          style: roundrock
+          threashhold: 5
+          always_enabled: false
+        template: ' {{ .FormattedMs }} '
+    type: prompt
+  - alignment: left
+    newline: true
+    segments:
       - type: git
         style: plain
         foreground: '#F3C267'
@@ -22,13 +52,7 @@ blocks:
           fetch_stash_count: true
           fetch_status: true
           fetch_upstream_icon: true
-        template: '   {{ .HEAD | replace "" "" }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
-      - type: path
-        style: plain
-        foreground: '#61AFEF'
-        properties:
-          style: full
-        template: ' {{ .Path }}'
+        template: ' {{ .HEAD | replace "" "" }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
     type: prompt
   - alignment: left
     newline: true
@@ -45,24 +69,6 @@ blocks:
         style: plain
         foreground: '#E06C75'
         template: ❯
-    type: prompt
-  - alignment: right
-    segments:
-      - type: status
-        style: plain
-        foreground: '#b8ff75'
-        foreground_templates:
-          - '{{ if gt .Code 0 }}#E06C75{{ end }}'
-        template: ' x{{ reason .Code }}'
-      - type: executiontime
-        style: diamond
-        foreground: '#b8ff75'
-        foreground_templates:
-          - '{{ if gt .Code 0 }}#E06C75{{ end }}'
-        properties:
-          style: roundrock
-          always_enabled: true
-        template: ' {{ .FormattedMs }} '
     type: prompt
  
 final_space: true
