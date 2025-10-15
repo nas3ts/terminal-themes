@@ -10,7 +10,7 @@ blocks:
         foreground: '#61AFEF'
         properties:
           style: full
-        template: '{{ if .SSHSession }}{{ else }} {{ end }} {{ .Path }}'
+        template: ' {{ .Path }}'
     type: prompt
   - alignment: right
     overflow: hide
