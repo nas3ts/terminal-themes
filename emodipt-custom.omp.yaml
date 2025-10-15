@@ -5,16 +5,12 @@ blocks:
   - alignment: left
     newline: true
     segments:
-      - type: session
-        styles: plain
-        foreground: '#90EE90'
-        template: '{{ if .SSHSession }} {{ end }}'
       - type: path
         style: plain
         foreground: '#61AFEF'
         properties:
           style: full
-        template: ' {{ .Path }}'
+        template: '{{ if .SSHSession }} {{ else }} {{ end }}{{ .Path }}'
     type: prompt
   - alignment: right
     overflow: hide
