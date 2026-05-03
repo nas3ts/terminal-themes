@@ -20,15 +20,15 @@ blocks:
         foreground: '#565656'
         foreground_templates:
           - '{{ if gt .Code 0 }}#E06C75{{ end }}'
-        template: ' x{{ reason .Code }}'
+        template: '{{ if gt .Code 0 }} ✘ {{ .Code }}{{ end }}'
+        properties:
+          always_enabled: false
       - type: executiontime
         style: plain
         foreground: '#565656'
-        foreground_templates:
-          - '{{ if gt .Code 0 }}#E06C75{{ end }}'
         properties:
           style: roundrock
-          threashhold: 5
+          threshold: 5
           always_enabled: false
         template: ' {{ .FormattedMs }} '
     type: prompt
